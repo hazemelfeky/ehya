@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  --blue-color: #1576d8;
+  --text-color: #183b56;
+  --bg-color: #f7f8f9;
+  color: var(--text-color);
+}
+
+.logo {
+  font-family: "Days One", sans-serif;
+  font-size: 2rem;
+  position: relative;
+  background: -webkit-linear-gradient(#244a71, rgb(16, 36, 63));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo span {
+  position: absolute;
+  width: 9%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  top: 40%;
+  right: -11%;
+}
+
+.container {
+  max-width: 70.25rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.app-header {
+  background-color: var(--bg-color);
+}
+
+.app-header-container {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header-right {
+  display: flex;
+  gap: 2.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.burger,
+.close-menu {
+  display: none;
+  background-color: unset;
+  border: unset;
+  font-size: 1.5rem;
+}
+
+.close-menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+
+.app-header-right nav {
+  display: flex;
+  align-items: center;
+}
+
+.app-header-right ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.app-header-right ul li {
+  font-weight: 600;
+}
+
+.app-header-right ul li a {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+.get-started {
+  padding: 0.75rem 1.5rem;
+  color: var(--blue-color);
+  border: 2px solid var(--blue-color);
+  background-color: unset;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    margin: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .burger,
+  .close-menu {
+    display: block;
+  }
+
+  .app-header {
+    min-height: 5rem;
+  }
+
+  .app-header-right {
+    position: absolute;
+    inset: 0;
+    transform: translateY(-100%);
+    background-color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .open-menu {
+    transform: translateY(0%);
+  }
+
+  .app-header-right ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* .container {
+    min-width: 71.25rem;
+  } */
+}
