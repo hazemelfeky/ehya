@@ -7,7 +7,13 @@
   padding: 0;
   --blue-color: #1576d8;
   --text-color: #183b56;
+  --text-light-color: #5a7184;
   --bg-color: #f7f8f9;
+  --red-color: #fc5a5a;
+  --yellow-color: #faad13;
+  --green-color: #36b37e;
+  --orange-color: #e95432;
+
   color: var(--text-color);
 }
 
@@ -21,8 +27,8 @@
 }
 .logo span {
   position: absolute;
-  width: 9%;
-  height: 20%;
+  width: 0.2em;
+  height: 0.2em;
   border-radius: 50%;
   background-color: var(--blue-color);
   top: 40%;
@@ -78,13 +84,10 @@
   gap: 2.5rem;
 }
 
-.app-header-right ul li {
-  font-weight: 600;
-}
-
 .app-header-right ul li a {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .get-started {
@@ -99,10 +102,89 @@
   cursor: pointer;
 }
 
+.hero {
+  background-color: var(--bg-color);
+  padding-bottom: 2rem;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.hero-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-top-left .bar {
+  width: 7.3rem;
+  height: 1rem;
+  background-color: var(--red-color);
+}
+.hero-top-left .hero-heading {
+  font-size: 3.5rem;
+}
+
+ul.hero-pros {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem 3rem;
+  flex-wrap: wrap;
+}
+ul.hero-pros li::before {
+  content: "•";
+  font-family: sans-serif;
+  color: var(--yellow-color);
+  font-weight: bolder;
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 1em;
+}
+
+ul.hero-pros li {
+  color: var(--text-light-color);
+  font-size: 18px;
+}
+
+.hero-join {
+  border-radius: 1rem;
+  background-color: #fff;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-join input,
+.hero-join button {
+  border: unset;
+}
+
+.hero-join input {
+  flex: 1;
+}
+
+.hero-join button {
+  font-weight: bold;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--green-color);
+  border-radius: 0.4rem;
+}
+
+.hero-image {
+  max-width: 24.5rem;
+}
+.hero-image img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 320px) {
-  .container {
+  /* .container {
     margin: 1.5rem;
-  }
+  } */
 }
 
 @media only screen and (max-width: 768px) {
@@ -132,6 +214,17 @@
   .app-header-right ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero-top,
+  .hero-pros,
+  .hero-top-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-top {
+    gap: 2rem;
   }
 }
 
