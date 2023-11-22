@@ -50,6 +50,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 
 .app-header-right {
@@ -302,7 +303,7 @@ ul.hero-pros li {
 }
 
 .items-container {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   position: relative;
   z-index: 2;
 }
@@ -461,6 +462,43 @@ ul.hero-pros li {
   color: var(--green-color);
 }
 
+.download {
+  background-color: var(--yellow-color);
+}
+.download-container {
+  padding: 5rem 0 0;
+  display: flex;
+  gap: 7rem;
+}
+.download .download-img {
+  border-radius: 1rem 1rem 0 0;
+  height: 310px;
+  background-color: #fff;
+  min-width: 450px;
+}
+
+.download-details {
+  padding-top: 3rem;
+}
+
+.download-details .title {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.download-details .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.download-details button {
+  border: 0;
+  background-color: var(--red-color);
+  border-radius: 0.4rem;
+  padding: 1.5rem 5rem;
+}
+
 @media only screen and (max-width: 320px) {
   /* .container {
     margin: 1.5rem;
@@ -469,7 +507,7 @@ ul.hero-pros li {
 
 @media only screen and (max-width: 768px) {
   .container {
-    margin: 5rem 1.5rem;
+    margin: 0 1.5rem;
   }
   .burger,
   .close-menu {
@@ -537,6 +575,33 @@ ul.hero-pros li {
 
   .most-item {
     flex-direction: column;
+  }
+
+  .download {
+    text-align: center;
+  }
+  .download .download-img {
+    height: 190px;
+    min-width: unset;
+  }
+
+  .download-container {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 2rem 0 0;
+  }
+  .download-container .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .download-details {
+    padding-top: 0;
+  }
+  .download-details .buttons {
+    justify-content: center;
+  }
+  .download-details button {
+    padding: 1rem 3rem;
   }
 }
 
