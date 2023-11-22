@@ -181,6 +181,119 @@ ul.hero-pros li {
   width: 100%;
 }
 
+.recommendation-container {
+  margin: 5rem auto;
+}
+
+.recommendation-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.recommendation-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.recommendation-title p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1.875rem;
+}
+
+.recommended-card {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.recommended-card:not(.special):hover {
+  background-color: #36b37f27;
+}
+
+.recommended-card:not(.special):hover .buy {
+  background-color: var(--green-color);
+  font-weight: 700;
+  color: #fff;
+}
+
+.recommended-card .like {
+  color: #5a7184;
+  background-color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.recommended-card .img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1rem;
+  background-color: var(--red-color);
+  margin-bottom: 2rem;
+}
+
+.recommended-card .name {
+  text-align: center;
+}
+.recommended-card .price {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.recommended-card .price .new {
+  font-weight: bold;
+}
+
+.recommended-card .price .old {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.recommended-card .buy {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 14px 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.special {
+  background-color: var(--orange-color);
+}
+.special * {
+  color: #fff;
+}
+.special .time span {
+  background-color: #da765f8a;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.special .img {
+  background-color: #fff;
+}
+
+.special .buy {
+  background-color: #fff;
+  color: var(--orange-color);
+  font-weight: bold;
+}
 @media only screen and (max-width: 320px) {
   /* .container {
     margin: 1.5rem;
@@ -225,6 +338,10 @@ ul.hero-pros li {
 
   .hero-top {
     gap: 2rem;
+  }
+
+  .hero-top-left .hero-heading {
+    font-size: 2rem;
   }
 }
 
