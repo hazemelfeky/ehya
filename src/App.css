@@ -239,7 +239,8 @@ ul.hero-pros li {
   place-content: center;
 }
 
-.recommended-card .img {
+.recommended-card .img,
+.items .slider-container .item .img {
   width: 7.5rem;
   height: 7.5rem;
   border-radius: 1rem;
@@ -294,6 +295,104 @@ ul.hero-pros li {
   color: var(--orange-color);
   font-weight: bold;
 }
+
+.items {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.items-container {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.items::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 25rem;
+  background-color: #36B37E;
+  opacity: 0.1;
+}
+
+.items-container .items-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-container .items-head h2 {
+  font-size: 2.4rem;
+}
+
+.items-container .items-head button {
+  background-color: var(--green-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  border: 0;
+  padding: 0.8rem 1.2rem;
+}
+
+.items .slider {
+  border-bottom: 2px solid #ddd;
+}
+
+.items .slider-container {
+  margin: 4rem 0;
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 40px 10px rgb(0 0 0 / 8%);
+  position: relative;
+  background-color: #fff;
+}
+
+.items .slider-container .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex: 1;
+  gap: 1rem;
+}
+.items .slider-container .item:not(:last-of-type) {
+  border-right: 2px solid #eee;
+}
+
+.items .slider-container .item .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.items .slider-container .item .description .name {
+  font-size: 1.25rem;
+}
+.items .slider-container .item .description p {
+  color: var(--text-light-color);
+}
+.items .slider-container .item .price {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--green-color);
+}
+
+.items .slider-container .slider-left {
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-content: center;
+}
 @media only screen and (max-width: 320px) {
   /* .container {
     margin: 1.5rem;
@@ -301,6 +400,9 @@ ul.hero-pros li {
 }
 
 @media only screen and (max-width: 768px) {
+  .container {
+    margin: 0 1.5rem;
+  }
   .burger,
   .close-menu {
     display: block;
@@ -342,6 +444,18 @@ ul.hero-pros li {
 
   .hero-top-left .hero-heading {
     font-size: 2rem;
+  }
+  .items .slider-container .item:not(:last-of-type) {
+    border-right: 0;
+    border-bottom: 2px solid #eee;
+  }
+  .items .slider-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .items .slider-container .slider-left {
+    position: relative;
+    right: 0;
   }
 }
 
