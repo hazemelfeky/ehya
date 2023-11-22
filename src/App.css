@@ -314,7 +314,7 @@ ul.hero-pros li {
   right: 0;
   left: 0;
   height: 25rem;
-  background-color: #36B37E;
+  background-color: #36b37e;
   opacity: 0.1;
 }
 
@@ -393,6 +393,74 @@ ul.hero-pros li {
   display: grid;
   place-content: center;
 }
+
+.most {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-top: 5rem;
+}
+.most-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 14rem;
+  scroll-snap-align: start;
+}
+.most-col h3 {
+  font-size: 1.5rem;
+}
+
+.most-item {
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  display: flex;
+  gap: 1rem;
+}
+.most-item .most-item-img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  background-color: var(--red-color);
+}
+.most-item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  justify-content: space-around;
+}
+.most-item-details-descripition {
+  display: flex;
+  gap: 2rem;
+}
+.most-item-details-descripition div {
+  display: flex;
+  gap: 0.4rem;
+  color: var(--text-light-color);
+}
+
+.fa-star {
+  color: var(--yellow-color);
+}
+
+.most-details {
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.most-details i,
+.most-details span {
+  color: var(--green-color);
+}
+
 @media only screen and (max-width: 320px) {
   /* .container {
     margin: 1.5rem;
@@ -401,7 +469,7 @@ ul.hero-pros li {
 
 @media only screen and (max-width: 768px) {
   .container {
-    margin: 0 1.5rem;
+    margin: 5rem 1.5rem;
   }
   .burger,
   .close-menu {
@@ -445,9 +513,18 @@ ul.hero-pros li {
   .hero-top-left .hero-heading {
     font-size: 2rem;
   }
+
+  .recommendation-title h2,
+  .items-container .items-head h2 {
+    font-size: 1.5rem;
+  }
+  .items-container .items-head button {
+    font-size: 1rem;
+  }
   .items .slider-container .item:not(:last-of-type) {
     border-right: 0;
     border-bottom: 2px solid #eee;
+    width: -webkit-fill-available;
   }
   .items .slider-container {
     flex-direction: column;
@@ -456,6 +533,10 @@ ul.hero-pros li {
   .items .slider-container .slider-left {
     position: relative;
     right: 0;
+  }
+
+  .most-item {
+    flex-direction: column;
   }
 }
 
