@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "./Logo";
 
 const Header = () => {
   const [menuClass, setMenuClass] = useState("");
@@ -6,9 +7,8 @@ const Header = () => {
   return (
     <header className="app-header">
       <div className="container app-header-container">
-        <div className="logo">
-          ehya <span></span>
-        </div>
+      <Logo   />
+
         <button onClick={() => setMenuClass("open-menu")} className="burger">
           <i className="fa fa-bars"></i>
         </button>

@@ -1,7 +1,9 @@
 const Logo = () => {
-  return ( 
-    <p className="logo">ehya <span></span></p>
-   );
-}
- 
+  return (
+    <div className="logo">
+      ehya <span></span>
+    </div>
+  );
+};
+
 export default Logo;
