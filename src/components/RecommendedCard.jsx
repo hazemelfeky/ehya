@@ -2,7 +2,7 @@ const RecommendedCard = ({ name }) => {
   return (
     <div className="recommended-card">
       <div className="like">
-        <i class="fa fa-heart" aria-hidden="true" />
+        <i className="fa fa-heart" aria-hidden="true" />
       </div>
       <div className="img"></div>
       <h4 className="name">{name}</h4>
