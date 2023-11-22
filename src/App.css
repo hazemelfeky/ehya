@@ -39,7 +39,6 @@
 .container {
   max-width: 70.25rem;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .app-header {
@@ -51,7 +50,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
 }
 
 .app-header-right {
@@ -587,12 +585,17 @@ ul.hero-pros li {
     font-size: 2rem;
   }
 
+  .hero-join button {
+    padding: 0.7rem;
+  }
+
   .recommendation-title h2,
   .items-container .items-head h2 {
     font-size: 1.5rem;
   }
   .items-container .items-head button {
     font-size: 1rem;
+    padding: 0.2rem;
   }
   .items .slider-container .item:not(:last-of-type) {
     border-right: 0;
@@ -623,7 +626,7 @@ ul.hero-pros li {
   .download-container {
     flex-direction: column-reverse;
     gap: 1.5rem;
-    padding: 2rem 0 0;
+    padding: 2rem 1rem 0;
   }
   .download-container .title {
     font-size: 1.5rem;
@@ -641,6 +644,7 @@ ul.hero-pros li {
   .footer-container {
     flex-direction: column-reverse;
     align-items: center;
+    padding: 2rem 1rem;
   }
   .footer-container .company {
     display: flex;
